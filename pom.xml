@@ -56,35 +56,6 @@
 					</excludes>
 				</configuration>
 			</plugin>
-		    <plugin>
-		        <groupId>com.microsoft.azure</groupId>
-		        <artifactId>azure-spring-apps-maven-plugin</artifactId>
-		        <version>1.14.0</version>
-		        <configuration>
-		            <subscriptionId>132ec65a-1b7a-4082-8f34-4790e71578a9</subscriptionId>
-		            <resourceGroup>test-rest-api</resourceGroup>
-		            <clusterName>pokeswapapi</clusterName>
-		            <appName>pokeswap-rest-api</appName>
-		            <isPublic>false</isPublic>
-		            <deployment>
-		                <cpu>1</cpu>
-		                <memoryInGB>1</memoryInGB>
-		                <instanceCount>10</instanceCount>
-		                <runtimeVersion>Java 17</runtimeVersion>
-		                <resources>
-		                    <resource>
-		                        <filtering/>
-		                        <mergeId/>
-		                        <targetPath/>
-		                        <directory>${project.basedir}/target</directory>
-		                        <includes>
-		                            <include>*.jar</include>
-		                        </includes>
-		                    </resource>
-		                </resources>
-		            </deployment>
-		        </configuration>
-		    </plugin>
 		</plugins>
 	</build>
 

@@ -60,6 +60,7 @@ public class UserController {
     public ResponseEntity<User> createUser(@RequestBody User user) {
         validateUser(user);
         validateUserExistence(user);
+        System.out.println(user);
         User userCreated = userService.createUser(user);
         return new ResponseEntity<>(userCreated, HttpStatus.CREATED);
     }

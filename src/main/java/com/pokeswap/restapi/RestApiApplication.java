@@ -25,7 +25,7 @@ public class RestApiApplication {
 		//config.setAllowCredentials(true);
 		config.addAllowedOrigin("*");
 		config.addAllowedHeader("*");
-		//config.addAllowedMethod("*");
+		config.addAllowedMethod("*");
 
 		// Register CORS configuration
 		source.registerCorsConfiguration("/**", config);

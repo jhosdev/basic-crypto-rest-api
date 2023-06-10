@@ -15,25 +15,25 @@ public class RestApiApplication {
 		SpringApplication.run(RestApiApplication.class, args);
 	}
 
-	@Bean
-	public FilterRegistrationBean<CorsFilter> corsFilter() {
-		FilterRegistrationBean<CorsFilter> registrationBean = new FilterRegistrationBean<>();
-		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-		CorsConfiguration config = new CorsConfiguration();
-
-		// Allow all origins access
-		//config.setAllowCredentials(true);
-		config.addAllowedOrigin("*");
-		config.addAllowedHeader("*");
-		config.addAllowedMethod("*");
-
-		// Register CORS configuration
-		source.registerCorsConfiguration("/**", config);
-
-		registrationBean.setFilter(new CorsFilter(source));
-		registrationBean.setOrder(0);
-
-		// Return the CORS filter
-		return registrationBean;
-	}
+	//@Bean
+	//public FilterRegistrationBean<CorsFilter> corsFilter() {
+	//	FilterRegistrationBean<CorsFilter> registrationBean = new FilterRegistrationBean<>();
+	//	UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+	//	CorsConfiguration config = new CorsConfiguration();
+//
+	//	// Allow all origins access
+	//	//config.setAllowCredentials(true);
+	//	config.addAllowedOrigin("*");
+	//	config.addAllowedHeader("*");
+	//	config.addAllowedMethod("*");
+//
+	//	// Register CORS configuration
+	//	source.registerCorsConfiguration("/**", config);
+//
+	//	registrationBean.setFilter(new CorsFilter(source));
+	//	registrationBean.setOrder(0);
+//
+	//	// Return the CORS filter
+	//	return registrationBean;
+	//}
 }
